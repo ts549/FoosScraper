@@ -1,0 +1,45 @@
+{
+    "productsList": [
+      {
+        "id": 1,
+        "link": "slack.com",
+        "category": "slack",
+        "title": "Slack Page",
+        "time": "5 years ago",
+        "blurb": "this text will show where the keyword showed up in the article..."
+      },
+      {
+        "id": 2,
+        "link": "confluence.com",
+        "category": "confluence",
+        "title": "Confluence Page Name",
+        "time": "5 years ago",
+        "blurb": "this text will show where the keyword showed up in the article..."
+      },
+      {
+        "id": 3,
+        "link": "stackoverflow.com",
+        "category": "stack-overflow",
+        "title": "Stack Overflow Page Name",
+        "time": "5 years ago",
+        "blurb": "this text will show where the keyword showed up in the article..."
+      },
+      {
+        "id": 4,
+        "link": "github.com",
+        "category": "github",
+        "title": "Github Page Name",
+        "time": "5 years ago",
+        "blurb": "this text will show where the keyword showed up in the article..."
+      },
+      {
+        "id": 5,
+        "link": "ssanswers.com",
+        "category": "rightanswers",
+        "title": "Right Answers Page Name",
+        "time": "5 years ago",
+        "blurb": "this text will show where the keyword showed up in the article..."
+      }
+    ]
+  }
+  
