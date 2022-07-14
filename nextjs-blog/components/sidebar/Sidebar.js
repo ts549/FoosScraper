@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Checkbox from "./Checkbox";
-import ProductList from "./ProductsList";
+import ProductList from "./ProductList";
 import { productsList } from "./data.json";
 import "./styles.css";
 // import Sidebar from './Sidebar';

@@ -3,11 +3,34 @@ import SearchBar from "../components/SearchBar"
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } 
     from "react-instantsearch-dom";
+import FuckThis from './api/scraper';
+// import Sidebar from "../components/sidebar/Sidebar"
+// import Layout from '../components/Layout';
 
 const searchClient = algoliasearch(
   "XJKWXUI2BM",
   "595a1f63030718fe0b164a2c2fbfe686",
 );
+
+// const apiGet = () => {
+//   const articles = []
+//   axios(url)
+//       .then(response=>{
+//           const html=response.data
+//           const $ = cheerio.load(html)
+//           $('.s-link',html).each(function () {
+//               const title = $(this).text()
+//               console.log(html)
+//               const url2 = $(this).attr('href')
+              
+//               articles.push(
+//                   title,
+//                   'https://stackoverflow.com' + url2)
+              
+//           })
+//   })
+// }
+
 
 export default function Home() {
   return (
@@ -23,6 +46,10 @@ export default function Home() {
           FooScraper
         </h1>
 
+        {/* <div>
+          <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        </div> */}
+
         <div className="grid">
           <InstantSearch 
             searchClient={searchClient} 
@@ -30,11 +57,15 @@ export default function Home() {
       
             {/* Adding Search Box */}
             <SearchBar/>
-      
+            
             {/* Adding Data */}
             <Hits />
           </InstantSearch>
+
         </div>
+
+
+
       </main>
 
       <footer>
@@ -135,36 +166,6 @@ export default function Home() {
 
           max-width: 800px;
           margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
         }
 
         .logo {
