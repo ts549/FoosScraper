@@ -1,0 +1,68 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+App {
+  font-family: 'Lato', sans-serif;
+}
+
+article {
+  padding: 10px;
+  background-color: CornflowerBlue;
+  color: white;
+  text-align: center;
+}
+
+ul {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); */
+  gap: 10px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.filter-title {
+  font-weight: bold;
+  size: 12px;
+  color: #b3b2b3;
+  margin-bottom: 10px;
+}
+.container {
+  padding: 2px;
+}
+
+.filter-option {
+  vertical-align: middle;
+  padding: 7px;
+}
+
+.rounded-checkbox {
+  width:20px;
+  height: 20px;
+  /* border-radius: 50%; */
+  vertical-align: middle;
+  border: 5px solid black;
+  /* appearance: none;
+  -webkit-appearance: none; */
+  /* outline: none;
+  cursor: pointer; */
+}
+
+.rounded-checkbox:hover {
+  background-color: #ccc;
+}
+
+
+.rounded-checkbox:checked {
+  background-color: #2196F3;
+}
+

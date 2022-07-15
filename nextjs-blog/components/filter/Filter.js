@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import Checkbox from "./Checkbox";
 import ProductList from "./ProductsList";
 import { productsList } from "./data.json";
-import "./styles.css";
-// import Sidebar from './Sidebar';
+// import "./styles.css";
 
-export default class Sidebar extends Component {
+export default class Filter extends Component {
   state = {
     products: productsList,
     categories: {
-      first: false,
-      second: false
+      slack: false,
+      confluence: false,
+      github: false,
+      rightanswers: false,
+      stackoverflow: false
     }
   };
 
@@ -36,43 +38,42 @@ export default class Sidebar extends Component {
     );
 
     return (
-      <div className="App">
-        {/* <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} /> */}
-        <h2>Filter For Websites</h2>
+      <div className="Filter">
+        <div className="filter-title">FILTERS</div>
         <Checkbox
-          id="slack-checkbox"
-          link="Slack"
+          id="1"
+          title="slack"
           name="slack"
-          handleChange={this.handleChange}
           checked={this.state.categories.slack}
+          handleChange={this.handleChange}
         />
         <Checkbox
-          id="confluence-checkbox"
-          link="Confluence (Wiki Pages)"
+          id="2"
+          title="confluence"
           name="confluence"
           handleChange={this.handleChange}
           checked={this.state.categories.confluence}
         />
         <Checkbox
-          id="stack-overflow-checkbox"
-          link="Stack Overflow"
-          name="stack-overflow"
-          handleChange={this.handleChange}
-          checked={this.state.categories.stackoverflow}
-        />
-        <Checkbox
-          id="github-checkbox"
-          link="Github"
+          id="3"
+          title="github"
           name="github"
           handleChange={this.handleChange}
           checked={this.state.categories.github}
         />
         <Checkbox
-          id="right-answers-checkbox"
-          link="Right Answers"
-          name="right-answers"
+          id="4"
+          title="rightanswers"
+          name="rightanswers"
           handleChange={this.handleChange}
           checked={this.state.categories.rightanswers}
+        />
+        <Checkbox
+          id="5"
+          title="stackoverflow"
+          name="stackoverflow"
+          handleChange={this.handleChange}
+          checked={this.state.categories.stackoverflow}
         />
         <ProductList
           products={

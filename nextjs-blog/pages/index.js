@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Filter from "../components/filter/Filter";
 import SearchBar from "../components/SearchBar"
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } 
@@ -8,10 +9,10 @@ const searchClient = algoliasearch(
   "XJKWXUI2BM",
   "595a1f63030718fe0b164a2c2fbfe686",
 );
-
 export default function Home() {
   return (
     <div className="container">
+      
       <Head>
         <title>FooScraper
         </title>
@@ -35,6 +36,9 @@ export default function Home() {
             <Hits />
           </InstantSearch>
         </div>
+
+        <Filter className="filter-container"/>
+
       </main>
 
       <footer>
@@ -177,6 +181,16 @@ export default function Home() {
             flex-direction: column;
           }
         }
+
+        .filter-container{
+          margin-top: 10 px;
+          padding: 10 px;
+          display: flex;
+          align-content: center;
+          justify-content: left;
+        }
+        
+
       `}</style>
 
       <style jsx global>{`
@@ -192,6 +206,70 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
+
+        // styles sophia added
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        
+        .filter-title {
+          font-weight: bold;
+          size: 12px;
+          color: #b3b2b3;
+          margin-bottom: 10px;
+        }
+
+        .filter-option {
+          vertical-align: middle;
+          padding: 7px;
+        }
+        
+        .rounded-checkbox {
+          width:20px;
+          height: 20px;
+          /* border-radius: 50%; */
+          vertical-align: middle;
+          border: 5px solid black;
+          /* appearance: none;
+          -webkit-appearance: none; */
+          /* outline: none;
+          cursor: pointer; */
+        }
+        
+        .rounded-checkbox:hover {
+          background-color: #ccc;
+        }
+        
+        
+        .rounded-checkbox:checked {
+          background-color: #2196F3;
+        }
+
+        // styles for productsList
+        .search-entries {
+          list-style-type: none;
+        }
+        
+        // styles for product
+        .article {
+          padding: 10px;
+        }
+
+        // styles for product text (title, link, time, blurb)
+        .article-link {
+          font-size: 14px;
+        }
+
+        .article-title{
+          color: blue;
+        }
+
+        p, .article-title{
+          display:inline;
+        }
+
+
       `}</style>
     </div>
   )

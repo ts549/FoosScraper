@@ -1,0 +1,46 @@
+{
+    "productsList": [
+      {
+        "id": 1,
+        "title": "Slack Page Title",
+        "category": "slack",
+        "link": "https://slack.com",
+        "time": "5 years ago",
+        "blurb": "A public platform building the definitive collection of coding questions & answers ... A community-based space to find and contribute answers to technical ..."
+      },
+      {
+        "id": 2,
+        "title": "Confluence Page Title",
+        "category": "confluence",
+        "link": "https://confluence.com",
+        "time": "5 years ago",
+        "blurb": "A public platform building the definitive collection of coding questions & answers ... A community-based space to find and contribute answers to technical ..."
+      },
+      {
+        "id": 3,
+        "title": "Github Page Title",
+        "category": "github",
+        "link": "https://github.com",
+        "time": "5 years ago",
+        "blurb": "A public platform building the definitive collection of coding questions & answers ... A community-based space to find and contribute answers to technical ..."
+      },
+      {
+        "id": 4,
+        "title": "Right Answers Page Title",
+        "category": "rightanswers",
+        "link": "https://rightanswers.com",
+        "time": "5 years ago",
+        "blurb": "A public platform building the definitive collection of coding questions & answers ... A community-based space to find and contribute answers to technical ..."
+      },
+      {
+        "id": 5,
+        "title": "Stack Overflow Page Title",
+        "category": "stackoverflow",
+        "link": "https://stackoverflow.com",
+        "time": "5 years ago",
+        "blurb": "A public platform building the definitive collection of coding questions & answers ... A community-based space to find and contribute answers to technical ..."
+      }
+      
+    ]
+  }
+  
