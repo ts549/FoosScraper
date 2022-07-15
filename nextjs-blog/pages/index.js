@@ -4,25 +4,52 @@ import SearchBar from "../components/SearchBar"
 import algoliasearch from "algoliasearch/lite";
 import { InstantSearch, SearchBox, Hits } 
     from "react-instantsearch-dom";
-
+import FuckThis from './api/scraper';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFeatherPointed } from '@fortawesome/free-solid-svg-icons';
 const searchClient = algoliasearch(
   "XJKWXUI2BM",
   "595a1f63030718fe0b164a2c2fbfe686",
 );
+
+// const apiGet = () => {
+//   const articles = []
+//   axios(url)
+//       .then(response=>{
+//           const html=response.data
+//           const $ = cheerio.load(html)
+//           $('.s-link',html).each(function () {
+//               const title = $(this).text()
+//               console.log(html)
+//               const url2 = $(this).attr('href')
+              
+//               articles.push(
+//                   title,
+//                   'https://stackoverflow.com' + url2)
+              
+//           })
+//   })
+// }
+
+
 export default function Home() {
   return (
     <div className="container">
-      
       <Head>
-        <title>FooScraper
+        <title>FindingLimu
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          FooScraper
+          FindingLimu   <FontAwesomeIcon icon={faFeatherPointed} className = "icon" />
         </h1>
+
+
+        {/* <div>
+          <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        </div> */}
 
         <div className="grid">
           <InstantSearch 
@@ -31,13 +58,15 @@ export default function Home() {
       
             {/* Adding Search Box */}
             <SearchBar/>
-      
+            
             {/* Adding Data */}
             <Hits />
           </InstantSearch>
+
         </div>
 
         <Filter className="filter-container"/>
+
 
       </main>
 
@@ -141,36 +170,6 @@ export default function Home() {
           margin-top: 3rem;
         }
 
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
         .logo {
           height: 1em;
         }
@@ -269,6 +268,10 @@ export default function Home() {
           display:inline;
         }
 
+        .icon {
+          width: 60px;
+          color: #042464;
+        }
 
       `}</style>
     </div>

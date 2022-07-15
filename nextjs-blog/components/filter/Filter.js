@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Checkbox from "./Checkbox";
 import ProductList from "./ProductsList";
 import { productsList } from "./data.json";
+
 // import "./styles.css";
 
 export default class Filter extends Component {

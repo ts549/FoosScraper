@@ -11,6 +11,9 @@ return (
 		placeholder="Search any term"
 		style={{ height:'40px',width:'280px',borderRadius:"10px"}}
 		title='Search bar'
+        onInput={event => {
+            console.log(event.target.value)
+          }}
 		/>
 	</form>
 	
